@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMN Studio | Design, video, photo & electronics</title>
+<meta name="description" content="AMN Studio: online graphic design, video editing, video shooting, personal photography and electronics services.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f4fb;--card:#fff;--ink:#101437;--mute:#566;--line:#d8dbf0;--blue:#2038ff;--coral:#ff5a3c;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1030;--card:#161a44;--ink:#eceeff;--mute:#a4a9d4;--line:#2b3070;--blue:#4a5cff}}
+:root[data-theme="dark"]{--bg:#0d1030;--card:#161a44;--ink:#eceeff;--mute:#a4a9d4;--line:#2b3070;--blue:#4a5cff}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;font-size:1.05rem}
+h1,h2,h3{font-family:'Syne','DM Sans',system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 20px 12px;color:#fff;background:linear-gradient(#2038ffee,#2038ff00)}
+header b{font-family:'Syne',sans-serif;font-size:1.3rem;letter-spacing:.02em}
+header nav{display:flex;gap:18px}
+header nav a{text-decoration:none;font-weight:500}
+.hero{background:#2038ff;color:#fff;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 20px 44px;position:relative;overflow:hidden}
+.hero svg{position:absolute;left:0;top:14%;width:100%;height:56%;opacity:.5}
+.hero svg path{fill:none;stroke:#fff;stroke-width:2;stroke-dasharray:1800;stroke-dashoffset:1800;animation:draw 3s ease-out forwards}
+.hero svg circle{fill:#ff5a3c}
+@keyframes draw{to{stroke-dashoffset:0}}
+.wm{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(6.5rem,31vw,22rem);line-height:.8;letter-spacing:-.04em;margin:0;position:relative}
+.wm span{color:#ff5a3c}
+.hero p{max-width:34ch;font-size:clamp(1.15rem,3vw,1.5rem);margin:22px 0 26px;position:relative}
+.cta{display:inline-block;background:#fff;color:#2038ff;font-weight:700;text-decoration:none;padding:14px 26px;border-radius:99px;margin-right:10px;position:relative}
+.cta.alt{background:none;color:#fff;border:2px solid #fff}
+section{padding:72px 20px;max-width:1080px;margin:0 auto}
+h2{font-size:clamp(2rem,6vw,3.4rem);margin-bottom:12px}
+.lead{color:var(--mute);max-width:52ch;margin:0 0 34px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.pan{border-radius:22px;padding:30px;color:#fff}
+.pan.d{background:var(--coral);color:#1a0a05}
+.pan.e{background:var(--blue)}.pan.v{background:#6a35ff}.pan.p{background:#ffb81f;color:#1f1500}
+.pan h3{font-size:1.8rem;margin-bottom:6px}
+.pan ul{padding-left:1.1em;margin:14px 0 0}
+.pan li{margin:6px 0}
+.work{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.tile{aspect-ratio:4/3;border-radius:16px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:700}
+.tile span{background:#0009;padding:4px 10px;border-radius:99px;font-size:.85rem;position:relative}
+.t1{background:radial-gradient(circle at 30% 40%,#ff5a3c 0 28%,transparent 29%),radial-gradient(circle at 62% 56%,#fff 0 20%,transparent 21%),#2038ff}
+.t2{background:linear-gradient(135deg,#ff5a3c 50%,#1a0a05 50%)}
+.t3{background:repeating-linear-gradient(90deg,#2038ff 0 24px,#fff 24px 28px),#2038ff}
+.t4{background:linear-gradient(#0c6b4a,#0c6b4a),#0c6b4a;background-image:linear-gradient(90deg,#9fe8c8 2px,transparent 2px),linear-gradient(#9fe8c8 2px,transparent 2px);background-size:34px 34px}
+.t5{background:radial-gradient(circle at 50% 50%,#ffd23c 0 14%,transparent 15%),repeating-radial-gradient(circle at 50% 50%,#101437 0 14px,#2b3070 14px 28px)}
+.t6{background:conic-gradient(from 40deg,#ff5a3c,#2038ff,#ffd23c,#ff5a3c)}
+.note{font-size:.9rem;color:var(--mute);margin-top:14px}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;align-items:start}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.stat p{margin:8px 0 0}
+.stat b{font-family:'Syne',sans-serif;font-size:1.25rem}
+form{display:grid;gap:12px;max-width:560px}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+textarea{min-height:130px;resize:vertical}
+button.cta{border:0;cursor:pointer;font:inherit;font-weight:700;background:#2038ff;color:#fff;width:max-content}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 0}
+.links a{border:1.5px solid var(--line);border-radius:99px;padding:8px 18px;text-decoration:none;font-weight:500}
+footer{text-align:center;color:var(--mute);padding:30px 20px 50px;border-top:1px solid var(--line)}
+@media(max-width:520px){header nav{gap:12px;font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){.hero svg path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+</style></head><body>
+<header><b>AMN</b><nav><a href="#services">Services</a><a href="#work">Work</a><a href="#contact">Contact</a></nav></header>
+
+<div class="hero">
+<svg viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 320H260L320 260H640L700 200H980L1040 140H1200"/>
+<path d="M0 90H180L240 150H520L580 90H860L920 150H1200"/>
+<path d="M300 400V300L360 240H430"/>
+<circle cx="260" cy="320" r="7"/><circle cx="700" cy="200" r="7"/><circle cx="1040" cy="140" r="7"/><circle cx="580" cy="90" r="7"/><circle cx="920" cy="150" r="7"/>
+</svg>
+<h1 class="wm">AMN<span>.</span></h1>
+<p>Graphic design, video editing, photography and electronics, all in one studio.</p>
+<div><a class="cta" href="#contact">Start a project</a><a class="cta alt" href="#work">See the work</a></div>
+</div>
+
+<section id="services">
+<h2>What I offer</h2>
+<p class="lead">Online services for creators and businesses. Send me your ideas or files, and I deliver the finished work digitally.</p>
+<div class="two">
+<div class="pan d"><h3>Graphic design</h3><p>Visuals that make your business easy to recognise and remember.</p>
+<ul><li>Logos and brand identity</li><li>Posters, flyers and banners</li><li>Social media visuals</li><li>Business cards and packaging</li></ul></div>
+<div class="pan v"><h3>Video editing</h3><p>Clean, engaging edits that keep people watching.</p>
+<ul><li>Reels, TikToks and YouTube videos</li><li>Colour correction and sound clean-up</li><li>Subtitles, titles and motion graphics</li><li>Ads and promo videos</li></ul></div>
+<div class="pan p"><h3>Shooting and photography</h3><p>Personal photographer and video shooting for your moments and your brand.</p>
+<ul><li>Personal and portrait photo sessions</li><li>Events and product photos</li><li>Video shooting for content and ads</li><li>Photo retouching</li></ul></div>
+<div class="pan e"><h3>Electronics</h3><p>Practical electronics for homes, shops and personal projects.</p>
+<ul><li>Repair and diagnostics</li><li>Custom circuits and Arduino projects</li><li>PCB design</li><li>Installation and setup</li></ul></div>
+</div>
+</section>
+
+<section id="work">
+<h2>Selected work</h2>
+<p class="lead">A look at the kind of projects AMN Studio takes on.</p>
+<div class="work">
+<div class="tile t1"><span>Logo and identity</span></div>
+<div class="tile t4"><span>PCB design</span></div>
+<div class="tile t2"><span>Poster</span></div>
+<div class="tile t5"><span>Video editing</span></div>
+<div class="tile t3"><span>Social media pack</span></div>
+<div class="tile t6"><span>Portrait shoot</span></div>
+</div>
+<p class="note">These tiles are placeholders for your real projects.</p>
+</section>
+
+<section id="about">
+<h2>Why AMN Studio</h2>
+<div class="about">
+<div class="stat"><b>Many skills</b><p>Design, video, photo and electronics from one person, so your project stays consistent.</p></div>
+<div class="stat"><b>Personal service</b><p>You talk directly to the person doing the work, so nothing gets lost.</p></div>
+<div class="stat"><b>Clear and fair</b><p>You get a price and a timeline before any work begins.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Let's work together</h2>
+<p class="lead">Tell me what you need and I'll reply with a quote and a timeline.</p>
+<form id="f">
+<input id="n" placeholder="Your name" required aria-label="Your name">
+<select id="s" aria-label="Service"><option>Graphic design</option><option>Video editing</option><option>Shooting / photography</option><option>Electronics</option><option>Other</option></select>
+<textarea id="m" placeholder="Describe your project" required aria-label="Project description"></textarea>
+<button class="cta" type="submit">Send message</button>
+</form>
+<div class="links"><a href="mailto:aminerach2011@gmail.com">aminerach2011@gmail.com</a><a href="https://instagram.com/amnstudio.1" target="_blank" rel="noopener">Instagram @amnstudio.1</a></div>
+</section>
+
+<footer>© <span id="y"></span> AMN Studio. Design, video, photo and electronics.</footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const q=encodeURIComponent,n=document.getElementById('n').value,s=document.getElementById('s').value,m=document.getElementById('m').value;
+  location.href='mailto:aminerach2011@gmail.com?subject='+q('AMN Studio: '+s+' request')+'&body='+q(m+'\n\n'+n);
+});
+</script>
+</body></html>
